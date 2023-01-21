@@ -1,3 +1,4 @@
+import { plans } from '@/database/data';
 import { reactive } from 'vue';
 
 export default {
@@ -5,7 +6,7 @@ export default {
     name: string;
     email: string;
     phone: string;
-    plan: null | { name: string; image: string; price: number };
+    plan: { name: string; image: string; price: number };
     addons: {
       name: string;
       description: string;
@@ -16,7 +17,7 @@ export default {
     name: '',
     email: '',
     phone: '',
-    plan: null,
+    plan: plans[0],
     addons: [],
     yearly: false,
   }),

@@ -78,24 +78,24 @@ const { form } = useForm;
 
 <style lang="scss" scoped>
 .plans {
-  @apply grid grid-cols-1 lg:grid-cols-3 gap-3 pt-6   select-none;
+  @apply grid select-none grid-cols-1 gap-3 pt-6   lg:grid-cols-3;
 
   .plan {
-    @apply border border-lightgray rounded-2xl w-full p-4 flex lg:flex-col gap-4 lg:gap-10 cursor-pointer transition-all duration-300;
+    @apply flex w-full cursor-pointer gap-4 rounded-2xl border border-lightgray p-4 transition-all duration-300 lg:flex-col lg:gap-10;
 
     &.active {
       @apply border-marine;
     }
     img {
-      @apply w-10 h-10 cursor-pointer;
+      @apply h-10 w-10 cursor-pointer;
     }
     label {
       .name {
-        @apply font-bold cursor-pointer;
+        @apply cursor-pointer font-bold;
       }
 
       .price {
-        @apply text-gray text-sm cursor-pointer;
+        @apply cursor-pointer text-sm text-gray;
 
         .message {
           @apply text-xs text-marine;
@@ -106,13 +106,13 @@ const { form } = useForm;
 }
 
 .toggle {
-  @apply lg:col-span-3 w-full flex justify-center gap-6 bg-magnolia rounded-md mt-4 py-3;
+  @apply mt-4 flex w-full justify-center gap-6 rounded-md bg-magnolia py-3 lg:col-span-3;
   .input {
-    @apply relative w-full max-w-[40px] inline-flex items-center px-3 py-2 rounded-full cursor-pointer;
+    @apply relative inline-flex w-full max-w-[40px] cursor-pointer items-center rounded-full px-3 py-2;
     @apply bg-marine;
     &::before {
       @apply content-[''];
-      @apply absolute w-4 h-4 bg-white rounded-full transition-all duration-300;
+      @apply absolute h-4 w-4 rounded-full bg-white transition-all duration-300;
 
       &.yearly {
         @apply left-[90%] -translate-x-full;

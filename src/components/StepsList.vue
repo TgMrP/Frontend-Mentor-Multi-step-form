@@ -30,10 +30,10 @@ const steps = formSteps.map((x) => x.sidebar);
   @apply flex justify-center gap-6 lg:flex-col lg:justify-start;
   @apply h-full w-full;
 
-  background-image: url('./images/bg-sidebar-mobile.svg');
+  background-image: url('/images/bg-sidebar-mobile.svg');
 
   @screen desktop {
-    background-image: url('./images/bg-sidebar-desktop.svg');
+    background-image: url('/images/bg-sidebar-desktop.svg');
   }
 
   @apply p-8;
